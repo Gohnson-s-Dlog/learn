@@ -1,5 +1,4 @@
 
-
 arg = '全局变量中的arg'  # 定义的arg是全局作用域
 def secondFloor():
     print(arg)  # 定义的arg是局部作用域
