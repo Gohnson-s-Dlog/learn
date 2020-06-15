@@ -45,11 +45,12 @@ button.click()#点击按钮
 time.sleep(2)
 driver.find_element_by_partial_link_text('Jame').click()
 
-# driver.find_element_by_xpath()          #
-# driver.find_element_by_css_selector()   #
-# driver.find_element_by_id()             #
-# driver.find_element_by_link_text()      #
-# driver.find_element_by_partial_link_text()  #
-# driver.find_element_by_name()               #
-# driver.find_element_by_class_name()         #
-# driver.find_element_by_tag_name()           #
+# driver.find_element_by_xpath()    常用   #通过路径定位元素  分为绝对路径 例:html\body\div\span
+                                          #和相对路径    例://*[@id="su"]  //根目录 *所有 [ ]一个属性
+# driver.find_element_by_css_selector()常用#本质与xpath差不多 input#su  input要查找的标签名  # id  su 值
+# driver.find_element_by_id()             #一般不会重复
+# driver.find_element_by_link_text()      #专门用于指定文字(文本字符串类型)进行定位  检验链接有效性
+# driver.find_element_by_partial_link_text()  # 与上差不多 用于关键字来进行定位
+# driver.find_element_by_name()               #可能重复,所以定位时只返回获取到的第一个name
+# driver.find_element_by_class_name()         #不常用,因为ClassName内容过多,且存在内容分割符 定位时容易出现解析错误
+# driver.find_element_by_tag_name()           #根据标签名查找 很少用会找到非常多的内容 特定情况下才用:获取一个表单 表格
